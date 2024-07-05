@@ -21,6 +21,9 @@ header {
 }
 .materi {
     background-color: #00a2c6;
+    padding-top: 1px;
+    padding-bottom: 2px;
+    border-right-width: 1506px;
     padding: 5px;
     position: sticky;
     top: 0;
