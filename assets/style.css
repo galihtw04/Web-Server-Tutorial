@@ -1,109 +1,135 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&family=Quicksand:wght@400;700&display=swap');
- 
- 
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Quicksand:wght@400;700&display=swap');
+
+/* Reset dasar dan pengaturan box-sizing untuk layout yang lebih mudah */
+* {
+    box-sizing: border-box;
+}
+
 body {
-   font-family: 'Quicksand', sans-serif;
-   margin: 0;
-   padding: 0;
-   background-image: url(../gambar/background.jpg);
-   background-size: 1000px;
-}
-
-main {
-   padding: 20px;
-   overflow: auto;
-}
-
-#web {
-   float: left;
-   width: 75%;
-}
-
-.judul {
-   padding-bottom: 30px;
-   padding-right: 40px;
-   padding-left: 40px;
-   padding-top: 30px;
-   background-color: grey;
-   text-align: center;
-   font-size: 20px;
-   color: white;
-}
-
-.topologi-cisco {
-   width: 72%;   
-   max-height: 190px;
-   object-fit: cover;
-   object-position: center;
-   float: left;
-   padding-right: 10px;
-}
-
-nav {
-   background-color: #00a2c6;
-   padding-top: 1px;
-   padding-bottom: 2px;
-   border-right-width: 1506px;
-   position: sticky;
-   top: 0;
+    font-family: 'calibri', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* Perbaikan: Menggunakan 'cover' agar gambar latar belakang selalu menutupi layar tanpa distorsi */
+    background-image: url(../gambar/background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Efek paralaks sederhana */
 }
 
 header {
-   display: inline;
+    padding: 20px;
+    text-align: center;
+    family: 'calibri', sans-serif;
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.9); /* Latar belakang putih semi-transparan */
+    /* Dihapus: 'display: inline' yang mengganggu struktur block header */
 }
 
-nav a{
-    font-weight: 400;
+header h1 {
+    font-family: 'calibri', sans-serif ;
+    margin: 0;
+    font-size: 40px;
+}
+
+header p {
+    margin: 5px 0 0 0;
+}
+
+nav {
+    background-color: #05f370;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100; /* Memastikan nav tetap di atas konten lain saat scrolling */
+    text-align: center;
+    /* Dihapus: 'border-right-width' yang sangat besar dan tidak valid */
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+    list-style-type: none;
+    margin: 0 15px;
+    /* Dihapus: 'front-color' yang tidak valid */
+}
+
+nav a {
+    font-weight: 700;
     text-decoration: none;
     font-size: 18px;
-    color: white;
- }
-nav li {
-   display: inline;
-   list-style-type: none;
-   margin-right: 20px;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
+
 nav a:hover {
-   font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #000;
+}
+
+main {
+    padding: 20px;
+    overflow: auto;
+}
+
+#web {
+    float: left;
+    width: 75%;
 }
 
 .cisco {
-   border-radius: 5px;
-   padding: 20px;
-   margin-top: 20px;
-   background-color: grey;
-   font-family: 'Lobster Two';
+    background-color: rgba(75, 165, 224, 0.95); /* Warna lebih menyatu dengan tema */
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Menambah bayangan halus */
+    overflow: auto; /* PENTING: Untuk mengatasi 'float' pada gambar di dalamnya (clearfix) */
 }
 
-.profile img {
-   width: 200px;
-   margin-left: 50px;
-   margin-right: auto;
-   text-align: center;
+/* Mengaplikasikan font 'Lobster Two' hanya pada judul artikel */
+.cisco h2 {
+    font-family: 'Lobster Two', cursive;
+    margin-top: 0;
 }
 
-
-.profile header {
-   text-align: center;
-}
-
-aside {
-   float: right;
-   width: 24%;
-   padding-left: 20px;
-   margin-top: 20px;
-   background-color: azure;
-}
-
-* {
-   box-sizing: border-box;
+.topologi-cisco {
+    width: 45%; /* Ukuran lebih seimbang dengan teks */
+    max-height: 250px;
+    object-fit: cover;
+    object-position: center;
+    float: left;
+    padding-right: 20px; /* Jarak lebih besar dari teks */
+    border-radius: 5px;
 }
 
 footer {
-    padding: 10px;
+    padding: 20px;
     color: white;
     background-color: #00a2c6;
     text-align: center;
     font-weight: bold;
     margin-top: 20px;
- }
+}
+
+/* Menghapus kode yang tidak terpakai agar CSS lebih bersih */
+/* .profile, .profile header, .profile img, aside { ... } */
+
+/* Penyesuaian untuk layar yang lebih kecil (Responsive Design) */
+@media screen and (max-width: 768px) {
+    #web {
+        width: 100%; /* Konten utama memenuhi layar */
+        float: none;
+    }
+
+    .topologi-cisco {
+        width: 100%; /* Gambar memenuhi lebar artikel */
+        float: none;
+        padding-right: 0;
+        margin-bottom: 15px; /* Memberi jarak antara gambar dan teks di bawahnya */
+    }
+}

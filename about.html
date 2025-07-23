@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About me</title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<style>
+    body {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        background: #f8f9fa;
+        margin: 0;
+        color: #222;
+        background-image: url('./gambar/background-sysadmin.jpg');
+        background-size: cover;
+    }
+    nav {
+        background: #05f370;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+    nav ul {
+        display: flex;
+        justify-content: center;
+        padding: 0.5em 0;
+        margin: 0;
+        list-style: none;
+    }
+    nav li {
+        margin: 0 18px;
+    }
+    nav a {
+        text-decoration: none;
+        color: #222;
+        font-weight: 500;
+        font-size: 1.05em;
+        transition: color 0.2s;
+        padding: 6px 12px;
+        border-radius: 4px;
+    }
+    nav a:hover, nav a:focus {
+        background: #e0ffe7;
+        color: #0a7d3b;
+    }
+    article {
+        max-width: 650px;
+        background: #fff;
+        margin: 2.5em auto 2em auto;
+        padding: 2em 2em 1.5em 2em;
+        border-radius: 12px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    }
+    h1 {
+        color: #05b35c;
+        margin-top: 0;
+        font-size: 2.2em;
+        letter-spacing: 1px;
+    }
+    p {
+        line-height: 1.7;
+        margin-bottom: 1.2em;
+    }
+    video {
+        display: block;
+        margin: 1.5em auto;
+        border-radius: 8px;
+        border: 2px solid #05f370;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        background: #000;
+    }
+    footer {
+        text-align: center;
+        padding: 1.2em 0 1em 0;
+        background: #f1f1f1;
+        color: #555;
+        font-size: 1em;
+        border-top: 1px solid #e0e0e0;
+    }
+    @media (max-width: 700px) {
+        article {
+            padding: 1em 0.7em;
+        }
+        nav ul {
+            flex-direction: column;
+            gap: 0.5em;
+        }
+        nav li {
+            margin: 0 0 0.5em 0;
+        }
+        video {
+            width: 100%;
+            height: auto;
+        }
+    }
+</style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="./ccna.html">Ccna</a></li>
+            <li><a href="index.html">Sysadmin</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./about.html">About Me</a></li>
+        </ul>
+    </nav>
+    <article>
+        <h1>About Me</h1>
+        <img src="./gambar/profile.jpg" alt="Foto Profil" class="spin-on-hover" style="display:block; margin: 0 auto 1.5em auto; width: 140px; height: 140px; object-fit: cover; border-radius: 50%; border: 4px solid #05f370; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+        <style>
+        .spin-on-hover {
+            transition: transform 1s cubic-bezier(.45,1.6,.45,.8);
+        }
+        .spin-on-hover:hover {
+            transform: rotate(360deg);
+        }   
+        </style>
+        <p>
+            Hi, saya Muhammad Galih Abdurrahman adalah Seorang Cloud Engineer yang berdomisili di Jakarta.
+            Saat ini sedang belajar HTML di Petani Kode.
+        </p>
+        <p>
+            Saya memang masih baru dalam web development, karena itu
+            saya tidak akan pernah berhenti belajar.
+        </p>
+        <h2>Keahlian</h2>
+        <table border="1" cellpadding="8" style="border-collapse:collapse; margin: 1em auto;">
+            <tr>
+                <th>Certificate</th>
+                <th>Level</th>
+            </tr>
+            <tr>
+                <td>Kubernetes</td>
+                <td>CKA</td>
+            </tr>
+            <tr>
+                <td>Adinusa</td>
+                <td>Linux, Docker, Ceph, Kubernetes, Gitlab</td>
+            </tr>
+            <tr>
+                <td>Agunsa Course</td>
+                <td>Linux, Networking cisco, Juniper</td>
+            </tr>
+            <tr>
+                <td>Mikrotik</td>
+                <td>MTCNA, MTCRE</td>
+            </tr>
+            <tr>
+                <td>Cisco</td>
+                <td>CCNAv7</td>
+            </tr>
+            <tr>
+                <td>Redhat</td>
+                <td>RHSA I,RHSA II</td>
+            </tr>
+        </table>
+        <p>Saya ingin menguasai bahasa HTML, CSS, Javascript, yaml, json, python dan php.
+            Simak video lengkap tentang saya.
+        </p>
+<iframe width="640" height="420" src="https://www.youtube.com/embed/qiQ5H-iwJ-w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p>Terima kasih telah mengunjungi halaman ini. Jika ada pertanyaan atau ingin berkolaborasi, silakan hubungi saya melalui halaman <a href="./contact.html">Contact</a>.</p>
+    </article>
+    <footer>
+        <p>Copyright &copy; 2025 Muhammad Galih Abdurrahman.</p>
+    </footer>
+</body>
+</html>

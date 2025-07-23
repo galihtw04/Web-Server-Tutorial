@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #05f370;
+            --accent: #0e1a2b;
+            --bg: #f7f9fa;
+            --card-bg: #fff;
+            --border: #e0e0e0;
+            --shadow: 0 2px 8px rgba(0,0,0,0.07);
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            background: var(--bg) url(./gambar/background-sysadmin.jpg) no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+        }
+        nav {
+            background: var(--primary);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0.5rem 0;
+            list-style: none;
+        }
+        nav li {
+            margin: 0 1.2rem;
+        }
+        nav a {
+            text-decoration: none;
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: color 0.2s;
+            padding: 6px 12px;
+            border-radius: 4px;
+        }
+        nav a:hover, nav a:focus {
+            background: var(--accent);
+            color: #fff;
+        }
+        main {
+            max-width: 480px;
+            margin: 3rem auto 0 auto;
+            background: rgba(255,255,255,0.93);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            padding: 2rem 2.5rem 1.5rem 2.5rem;
+        }
+        h1 {
+            text-align: center;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+        }
+        form label {
+            font-weight: 500;
+            color: #222;
+        }
+        form input[type="text"],
+        form textarea {
+            width: 100%;
+            padding: 0.7rem;
+            margin: 0.5rem 0 1rem 0;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 1rem;
+            background: #f9f9f9;
+            transition: border 0.2s;
+        }
+        form input[type="text"]:focus,
+        form textarea:focus {
+            border: 1.5px solid var(--primary);
+            outline: none;
+        }
+        form input[type="submit"] {
+            background: var(--primary);
+            color: var(--accent);
+            border: none;
+            padding: 0.7rem 2.2rem;
+            border-radius: 6px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 1px 4px rgba(5,243,112,0.08);
+            transition: background 0.2s, color 0.2s;
+        }
+        form input[type="submit"]:hover {
+            background: var(--accent);
+            color: #fff;
+        }
+        .contact-list {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0 0 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .contact-list li {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+            padding: 0.8rem 1.2rem;
+            display: flex;
+            align-items: center;
+            transition: box-shadow 0.2s;
+        }
+        .contact-list li:hover {
+            box-shadow: 0 4px 16px rgba(5,243,112,0.08);
+        }
+        .contact-icon {
+            font-size: 1.3rem;
+            margin-right: 12px;
+        }
+        .contact-list a {
+            color: var(--accent);
+            font-weight: 500;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .contact-list a:hover {
+            color: var(--primary);
+        }
+        footer {
+            text-align: center;
+            margin: 2.5rem 0 1rem 0;
+            color: #666;
+            font-size: 0.98rem;
+        }
+        @media (max-width: 600px) {
+            main {
+                padding: 1.2rem 0.7rem;
+                margin-top: 1.2rem;
+            }
+            nav ul {
+                flex-direction: column;
+            }
+            nav li {
+                margin: 0.4rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="./ccna.html">Ccna</a></li>
+            <li><a href="index.html">Sysadmin</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./about.html">About Me</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Contact Me</h1>
+        <form id="contactForm">
+            <label for="subject">Subject</label><br />
+            <input type="text" id="subject" name="subject" placeholder="Subject" required/><br />
+            
+            <label for="message">Pesan</label><br />
+            <textarea id="message" name="message" placeholder="Tulis pesan anda..." rows="4" required></textarea><br /><br />
+            
+            <input type="submit" value="Kirim" />
+        </form>
+        <ul class="contact-list">
+            <li>
+                <span class="contact-icon">✉️</span>
+                <a href="mailto:galihtw04@gmail.com">Email</a>
+            </li>
+            <li>
+                <span class="contact-icon">🔗</span>
+                <a href="https://www.linkedin.com/in/muhammad-galih-abdurrahman/" target="_blank">LinkedIn</a>
+            </li>
+            <li>
+                <span class="contact-icon">📨</span>
+                <a href="https://t.me/Galih_abdurrahman" target="_blank">Telegram</a>
+            </li>
+        </ul>
+    </main>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            const encodedSubject = encodeURIComponent(subject);
+            const encodedMessage = encodeURIComponent(message);
+            
+            const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=muhammadgalih329@gmail.com&su=${encodedSubject}&body=${encodedMessage}`;
+            
+            window.open(gmailURL, '_blank');
+        });
+    </script>
+    <footer style="text-align: center; margin-top: 20px;">
+        <p>Muhammad Galih Abdurrahman &#169; 2025, UAS Pemrograman Web I</p>
+    </footer>
+</body>
+</html>
